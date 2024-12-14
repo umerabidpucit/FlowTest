@@ -5,4 +5,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface  UserRepository {
     fun getUserData(): Flow<List<User>>
+    fun getUsersWithPostCount(): Flow<List<User>>
 }

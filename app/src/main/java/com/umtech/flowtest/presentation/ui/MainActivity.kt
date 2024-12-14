@@ -6,6 +6,8 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
+import androidx.navigation.compose.rememberNavController
+import com.umtech.flowtest.presentation.ui.navigation.AppNavHost
 import com.umtech.flowtest.presentation.ui.theme.KoinMVIComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -13,11 +15,16 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             KoinMVIComposeTheme {
+                // Set up a Surface for theming and background
                 Surface(
                     modifier = androidx.compose.ui.Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    MainScreen()
+                    // Create the NavController for navigation
+                    val navController = rememberNavController()
+
+                    // Provide the NavController to the AppNavHost composable
+                    AppNavHost(navController = navController)
                 }
             }
         }
