@@ -6,7 +6,7 @@
 ## MVVM Architecture:
 #### ViewModel handles data fetching and state management.
 
-## Hilt for Dependency Injection:
+## Koin:
 #### Simplifies dependencies for Retrofit and repositories.
 
 ## Jetpack Compose UI:
